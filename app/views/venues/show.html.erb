@@ -5,7 +5,7 @@
 <p><%= @venue.address %></p>
 <p><%= @venue.price %></p>
 
-<%= link_to 'Edit this Venue', edit_user_venue_path(@user, @venue) %>
-<%= link_to 'Delete this Venue', user_venue_path(@user, @venue), method: :delete, data: { confirm: "Are you sure you want to delete this Venue?" } %>
+<%= link_to 'Edit this Venue', edit_venue_path(@venue) %>
+<%= link_to 'Delete this Venue', venue_path(@venue), method: :delete, data: { confirm: "Are you sure you want to delete this Venue?" } %>
 <%= link_to 'Back to Home', root_path %>
 

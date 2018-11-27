@@ -1,5 +1,5 @@
 class VenuesController < ApplicationController
-  before_action :set_user, only: [:show, :new, :create, :edit, :update, :destroy]
+
   def index
     @venues = Venue.all
   end
@@ -14,9 +14,8 @@ class VenuesController < ApplicationController
 
   def create
     @venue = Venue.new(venue_params)
-    @venue.user = @user
     @venue.save
-    redirect_to user_venue_path(@user, @venue)
+    redirect_to venue_path(@venue)
   end
 
   def edit
@@ -26,7 +25,7 @@ class VenuesController < ApplicationController
   def update
     @venue = Venue.find(params[:id])
     @venue.update(venue_params)
-    redirect_to user_venue_path(@user, @venue)
+    redirect_to venue_path(@venue)
   end
 
   def destroy
