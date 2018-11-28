@@ -19,6 +19,11 @@
   padding-top: 30px;
 }
 
+.text:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
 .text2 {
   color: #fff;
   font-size: 15px;
@@ -29,12 +34,23 @@
 
 }
 
+.text2:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
 .text3 {
   color: #fff;
   font-size: 25px;
   transition-duration: 0.2s;
   text-align: center;
 }
+
+.text3:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
 
 .footer-links {
   color: #FA944B;
