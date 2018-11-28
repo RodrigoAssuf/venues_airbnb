@@ -1,0 +1,7 @@
+<h2>Index of your Bookings</h2>
+
+<% @bookings.each do |b| %>
+  <%= b.venue.name %>
+  <%= b.initial_date %>
+  <%= b.final_date %>
+<% end %>

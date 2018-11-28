@@ -4,6 +4,10 @@ class VenuesController < ApplicationController
     @venues = Venue.all
   end
 
+  def personal_index
+    @venues = Venue.where(user: current_user)
+  end
+
   def show
     @venue = Venue.find(params[:id])
   end
