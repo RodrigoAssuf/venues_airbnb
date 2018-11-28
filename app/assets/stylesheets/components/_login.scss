@@ -16,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container {
+.login-container {
   background-color: $brand-color-1;
   width: 600px;
   height: 320px;
@@ -132,58 +132,4 @@ body {
     }
   }
 }
-.tree {
-  height: auto;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 0;
-  bottom: 30px;
 
-  .leaves{
-    z-index: 1;
-    animation-delay: 0.5s;
-    animation-duration: 1s;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 100px 100px 100px;
-    border-radius: 30%;
-    border-color: transparent transparent #6B8E23 transparent;
-    position: relative;
-    bottom: 40px;
-    &:before {
-      content: " ";
-      border-style: solid;
-      border-width: 0 65px 100px 65px;
-      border-radius: 30%;
-      border-color: transparent transparent #6B8E23 transparent;
-      position: absolute;
-      left: -65px;
-      top: -100px;
-    }
-    &:after {
-      content: " ";
-      border-style: solid;
-      border-width: 0 85px 100px 85px;
-      border-radius: 30%;
-      border-color: transparent transparent #6B8E23 transparent;
-      position: absolute;
-      left: -85px;
-      top: -50px;
-    }
-  }
-
-  .trunk {
-    z-index: 0;
-    width: 100px;
-    height: 50px;
-    background-color: #8B4513;
-    position: absolute;
-    bottom: 0px;
-  }
-
-}
