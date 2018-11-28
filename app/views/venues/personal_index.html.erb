@@ -2,7 +2,7 @@
 
 <% @venues.each do |v| %>
   <%= v.category %>
-  <%= v.name %>
+  <%= link_to v.name, venue_path(v) %>
   <%= v.address %>
   <%= v.price %>
   <% end %>
