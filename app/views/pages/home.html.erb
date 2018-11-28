@@ -1,11 +1,16 @@
-
-
-       <h1>Find your perfect venue</h1>
-      <p>with venues airbnb</p>
-    </div>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ac84274453d0240fd5a88b59c946c292&auto=format&fit=crop&w=1350&q=80');">
+  <div class="banner">
+    <h1>Find your perfect venue</h1>
+    <p>with venues airbnb</p>
+    <a class="btn btn-primary btn-lg">Browse venues now</a>
   </div>
+</div>
 
-  <h2> Wedding </h2>
+
+<!-- SHOWING WEDDING -->
+ <% @venues.each do |venue| %>
+  <h2><%= venue.category %></h2>
+<% end %>
 
   <div class="container">
     <div class="row">
@@ -13,7 +18,20 @@
         <!-- insert <div class="card"> -->
           <div class="card">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e66da37aeaaf3a2c6dd2686a9b459f51&auto=format&fit=crop&w=1050&q=80" alt="wedding">
-            <div class="card-category">WEDDING</div>
+
+            <!-- SHOWING WEDDING -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
             <a class="card-link" href="#" ></a>
           </div>
 
@@ -22,7 +40,20 @@
         <!-- insert <div class="card"> -->
           <div class="card">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1506949743055-0fa2748c8ee5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df0f5595f480ce9679e69229007558ec&auto=format&fit=crop&w=1051&q=80" alt="wedding">
-            <div class="card-category">WEDDING</div>
+
+            <!-- SHOWING WEDDING -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
             <a class="card-link" href="#" ></a>
           </div>
       </div>
@@ -30,7 +61,20 @@
         <!-- insert <div class="card"> -->
           <div class="card">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-0.3.5&s=28cfe617a27342ffbcbe434b80c01a78&auto=format&fit=crop&w=1350&q=80" alt="wedding">
-            <div class="card-category">WEDDING</div>
+
+            <!-- SHOWING WEDDING -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
             <a class="card-link" href="#" ></a>
           </div>
       </div>
@@ -38,11 +82,119 @@
         <!-- insert <div class="card"> -->
           <div class="card">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?ixlib=rb-0.3.5&s=a0c13a80f7492f56671c22b05b92565e&auto=format&fit=crop&w=1350&q=80" alt="wedding">
-            <div class="card-category">WEDDING</div>
+
+            <!-- SHOWING WEDDING -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
             <a class="card-link" href="#" ></a>
           </div>
       </div>
     </div>
   </div>
 
+
+<!-- SHOWING CORPORATE -->
+ <% @venues.each do |venue| %>
+  <h2><%= venue.category %></h2>
+<% end %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e66da37aeaaf3a2c6dd2686a9b459f51&auto=format&fit=crop&w=1050&q=80" alt="wedding">
+
+            <!-- SHOWING CORPORATE -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
+          </div>
+
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1506949743055-0fa2748c8ee5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df0f5595f480ce9679e69229007558ec&auto=format&fit=crop&w=1051&q=80" alt="wedding">
+
+            <!-- SHOWING CORPORATE -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
+          </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-0.3.5&s=28cfe617a27342ffbcbe434b80c01a78&auto=format&fit=crop&w=1350&q=80" alt="wedding">
+
+            <!-- SHOWING CORPORATE -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
+          </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?ixlib=rb-0.3.5&s=a0c13a80f7492f56671c22b05b92565e&auto=format&fit=crop&w=1350&q=80" alt="wedding">
+
+            <!-- SHOWING CORPORATE -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
+          </div>
+      </div>
+    </div>
+  </div>
 
