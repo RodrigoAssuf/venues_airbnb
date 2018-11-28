@@ -8,11 +8,11 @@
 <p class="bannertext3">Price: <%= @venue.price %></p>
 
 <% if @venue.user == current_user %>
-  <%= link_to 'Edit this Venue', edit_venue_path(@venue) %>
-  <%= link_to 'View the bookings of this Venue', venue_bookings_path(@venue, @booking) %>
-  <%= link_to 'Delete this Venue', venue_path(@venue), method: :delete, data: { confirm: "Are you sure you want to delete this Venue?" } %>
+  <a class="actionbutton" <%= link_to 'Edit this Venue', edit_venue_path(@venue) %> </a>
+  <a class="actionbutton" <%= link_to 'View the bookings of this Venue', venue_bookings_path(@venue, @booking) %> </a>
+  <a class="actionbutton" <%= link_to 'Delete this Venue', venue_path(@venue), method: :delete, data: { confirm: "Are you sure you want to delete this Venue?" } %>
 <% else %>
   <%= link_to 'Book this Venue', new_venue_booking_path(@venue, @booking) %>
-<% end %>
+<% end %> </a>
 
-<%= link_to 'Back to Home', root_path %>
+<a class="actionbutton" <%= link_to 'Back to Home', root_path %> </a>

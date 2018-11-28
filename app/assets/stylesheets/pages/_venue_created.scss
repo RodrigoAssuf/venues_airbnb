@@ -1,0 +1,28 @@
+.actionbutton {
+  color: white;
+  border:none;
+  border-radius: 12px;
+  position:relative;
+  height: 60px;
+  font-size: 1.6em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline:none;
+  padding: 15px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  top: 45px;
+  // bottom: 600px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.actionbutton:hover {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+
+.buttonbox {
+
+}
