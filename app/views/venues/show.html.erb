@@ -1,9 +1,9 @@
 <h1>Venue Show Test Page</h1>
 
-<p><%= @venue.category %></p>
-<p><%= @venue.name %></p>
-<p><%= @venue.address %></p>
-<p><%= @venue.price %></p>
+<p>Category: <%= @venue.category %></p>
+<p>Name: <%= @venue.name %></p>
+<p>Address: <%= @venue.address %></p>
+<p>Price: <%= @venue.price %></p>
 
 <% if @venue.user == current_user %>
   <%= link_to 'Edit this Venue', edit_venue_path(@venue) %>

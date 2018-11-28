@@ -1,0 +1,17 @@
+.button {
+    color: #999999;
+    font-family: Lato;
+    border: 1px solid #999999;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: lighter;
+    background: white;
+    opacity: 1;
+    margin-top: 200px;
+}
+
+.button:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}

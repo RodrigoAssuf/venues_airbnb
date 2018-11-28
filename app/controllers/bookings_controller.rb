@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_venue
-  # before_action :set_user, only: [:index, :show, :new, :create]
 
   def index
     @bookings = @venue.bookings.where(user: current_user)
@@ -44,8 +44,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:initial_date, :final_date)
   end
-
-  # def set_user
-  #   @user = User.find(params[:user_id])
-  # end
 end

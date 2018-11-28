@@ -1,199 +1,200 @@
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-0.3.5&s=10bf87e15c19a025b7b69f3147983d14&auto=format&fit=crop&w=1050&q=80');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ac84274453d0240fd5a88b59c946c292&auto=format&fit=crop&w=1350&q=80');">
+  <div class="banner">
     <h1>Find your perfect venue</h1>
     <p>with venues airbnb</p>
+    <a class="btn btn-primary btn-lg">Browse venues now</a>
   </div>
 </div>
 
 
+<!-- SHOWING WEDDING -->
+ <% @venues.each do |venue| %>
+  <h2><%= venue.category %></h2>
+<% end %>
 
-<h2> Wedding </h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e66da37aeaaf3a2c6dd2686a9b459f51&auto=format&fit=crop&w=1050&q=80" alt="wedding">
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e66da37aeaaf3a2c6dd2686a9b459f51&auto=format&fit=crop&w=1050&q=80" alt="wedding">
-          <div class="card-category">WEDDING</div>
-          <div class="card-description">
-            <h2>Rio de Janeiro</h2>
-            <p>A charming place to get married</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
+            <!-- SHOWING WEDDING -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
 
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1506949743055-0fa2748c8ee5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df0f5595f480ce9679e69229007558ec&auto=format&fit=crop&w=1051&q=80" alt="wedding">
-          <div class="card-category">WEDDING</div>
-          <div class="card-description">
-            <h2>Rio de Janeiro</h2>
-            <p>A charming place to get married</p>
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-0.3.5&s=28cfe617a27342ffbcbe434b80c01a78&auto=format&fit=crop&w=1350&q=80" alt="wedding">
-          <div class="card-category">WEDDING</div>
-          <div class="card-description">
-            <h2>Rio de Janeiro</h2>
-            <p>A charming place to get married</p>
+
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1506949743055-0fa2748c8ee5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df0f5595f480ce9679e69229007558ec&auto=format&fit=crop&w=1051&q=80" alt="wedding">
+
+            <!-- SHOWING WEDDING -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?ixlib=rb-0.3.5&s=a0c13a80f7492f56671c22b05b92565e&auto=format&fit=crop&w=1350&q=80" alt="wedding">
-          <div class="card-category">WEDDING</div>
-          <div class="card-description">
-            <h2>Rio de Janeiro</h2>
-            <p>A charming place to get married</p>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-0.3.5&s=28cfe617a27342ffbcbe434b80c01a78&auto=format&fit=crop&w=1350&q=80" alt="wedding">
+
+            <!-- SHOWING WEDDING -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?ixlib=rb-0.3.5&s=a0c13a80f7492f56671c22b05b92565e&auto=format&fit=crop&w=1350&q=80" alt="wedding">
+
+            <!-- SHOWING WEDDING -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
+          </div>
+      </div>
     </div>
   </div>
-</div>
 
-<h2> Birthday </h2>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ac84274453d0240fd5a88b59c946c292&auto=format&fit=crop&w=1050&q=80" alt="birthday">
-          <div class="card-category">BIRTHDAY</div>
-          <div class="card-description">
-            <h2>Salvador</h2>
-            <p>A charming place to get married</p>
+<!-- SHOWING CORPORATE -->
+ <% @venues.each do |venue| %>
+  <h2><%= venue.category %></h2>
+<% end %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e66da37aeaaf3a2c6dd2686a9b459f51&auto=format&fit=crop&w=1050&q=80" alt="wedding">
+
+            <!-- SHOWING CORPORATE -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=675d706c330862ec0a0b01703de8abba&auto=format&fit=crop&w=1050&q=80" alt="birthday">
-          <div class="card-category">BIRTHDAY</div>
-          <div class="card-description">
-            <h2>Salvador</h2>
-            <p>A charming place to get married</p>
+
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1506949743055-0fa2748c8ee5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df0f5595f480ce9679e69229007558ec&auto=format&fit=crop&w=1051&q=80" alt="wedding">
+
+            <!-- SHOWING CORPORATE -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1470753937643-efeb931202a9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=605dda29d7945345968d2dfb3eeb672e&auto=format&fit=crop&w=1050&q=80" alt="birthday">
-          <div class="card-category">BIRTHDAY</div>
-          <div class="card-description">
-            <h2>Salvador</h2>
-            <p>A charming place to get married</p>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-0.3.5&s=28cfe617a27342ffbcbe434b80c01a78&auto=format&fit=crop&w=1350&q=80" alt="wedding">
+
+            <!-- SHOWING CORPORATE -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9b9cb51ea58b136b1ccfc012192afcc&auto=format&fit=crop&w=1350&q=80" alt="birthday">
-          <div class="card-category">BIRTHDAY</div>
-          <div class="card-description">
-            <h2>Salvador</h2>
-            <p>A charming place to get married</p>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <!-- insert <div class="card"> -->
+          <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1525441273400-056e9c7517b3?ixlib=rb-0.3.5&s=a0c13a80f7492f56671c22b05b92565e&auto=format&fit=crop&w=1350&q=80" alt="wedding">
+
+            <!-- SHOWING CORPORATE -->
+            <div class="card-category">
+            <% @venues.each do |venue| %>
+              <h3><%= venue.category %></h3>
+            <% end %>
+            </div>
+
+            <!-- SHOWING VENUE NAME & CITY -->
+            <% @venues.each do |venue| %>
+              <h2><%= venue.name %></h2>
+              <p><%= venue.city %></p>
+            <% end %>
+
+            <a class="card-link" href="#" ></a>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<h2> Corporate </h2>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1535593167496-0f3f312d4d8a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a3764c35cc96838d33d6175bd50356f&auto=format&fit=crop&w=1051&q=80" alt="corporate">
-          <div class="card-category">CORPORATE</div>
-          <div class="card-description">
-            <h2>Sao Paulo</h2>
-            <p>Perfect meeting with your team</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-        <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1525168040608-0fa00f174419?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c04268d1ae7ec8c6019db36937aa4cce&auto=format&fit=crop&w=1350&q=80" alt="corporate">
-          <div class="card-category">CORPORATE</div>
-          <div class="card-description">
-            <h2>Sao Paulo</h2>
-            <p>Perfect meeting with your team</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1526547319484-63dce467060b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8afae1b017a419d306cbf2605def0b55&auto=format&fit=crop&w=1050&q=80" alt="corporate">
-          <div class="card-category">CORPORATE</div>
-          <div class="card-description">
-            <h2>Sao Paulo</h2>
-            <p>Perfect meeting with your team</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-    <div class="col-xs-6 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card">
-          <img class="card-img-top" src="https://images.unsplash.com/photo-1534450094358-51abce6b6327?ixlib=rb-0.3.5&s=adadf1beaaca73c53402d29e100022b3&auto=format&fit=crop&w=1050&q=80" alt="corporate">
-          <div class="card-category">CORPORATE</div>
-          <div class="card-description">
-            <h2>Sao Paulo</h2>
-            <p>Perfect meeting with your team</p>
-          </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-        </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Find your perfect venue <i class="fas fa-heart"></i> with Venue Airbnb
-  </div>
-</div>
