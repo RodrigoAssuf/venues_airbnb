@@ -20,9 +20,9 @@
     <% if user_signed_in? %>
 
     <!-- Links when logged in -->
-    <%= link_to "Link 1", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Link 2", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Link 3", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Your Venues", personal_index_venues_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Your Bookings", user_bookings_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Create a Venue", new_venue_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
@@ -48,7 +48,7 @@
       </div>
     </div>
     <% else %>
-    
+
     <!-- Login link (when logged out) -->
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>

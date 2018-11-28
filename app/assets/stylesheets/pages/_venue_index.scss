@@ -1,0 +1,62 @@
+.smallbanner {
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af5af77aed859c2f16c5234900f54ab9&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    position: relative;
+}
+
+.bannertext {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+  padding-top: 30px;
+}
+
+.bannertext2 {
+  text-align: center;
+  font-size: 120px;
+  margin-top: 0px;
+  padding-top: 150px;
+  padding-bottom: -300px;
+
+}
+
+.bannertext3 {
+  font-size: 120px;
+  font-size: 50px;
+  margin-top: 0px;
+  padding-top: 30px;
+  text-align: center;
+  text-align: left;
+  padding-left : 480px;
+}
+
+.createbutton {
+  color: white;
+  border:none;
+  border-radius: 12px;
+  position:relative;
+  height: 60px;
+  font-size: 1.6em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline:none;
+  padding: 15px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  top: 45px;
+  // bottom: 600px;
+  text-decoration: none;
+}
+
+.createbutton:hover {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
