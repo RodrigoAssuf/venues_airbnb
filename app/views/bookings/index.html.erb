@@ -1,0 +1,8 @@
+<h2>Test: All the Bookings of a Venue</h2>
+
+<% @bookings.each do |b| %>
+  <p><%= b.initial_date %></p>
+  <p><%= b.final_date %></p>
+  <p><%= b.user.email %></p>
+  <p><%= b.price %></p>
+  <% end %>
