@@ -1,9 +1,11 @@
-<h1>Venue Show Test Page</h1>
+<div class="smallbanner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af5af77aed859c2f16c5234900f54ab9&auto=format&fit=crop&w=1350&q=80');">
 
-<p>Category: <%= @venue.category %></p>
-<p>Name: <%= @venue.name %></p>
-<p>Address: <%= @venue.address %></p>
-<p>Price: <%= @venue.price %></p>
+<h1 class="bannertext2">Here is the venue you added</h1>
+
+<p class="bannertext3">Category: <%= @venue.category %></p>
+<p class="bannertext3">Name: <%= @venue.name %></p>
+<p class="bannertext3">Address: <%= @venue.address %></p>
+<p class="bannertext3">Price: <%= @venue.price %></p>
 
 <% if @venue.user == current_user %>
   <%= link_to 'Edit this Venue', edit_venue_path(@venue) %>
