@@ -2,6 +2,7 @@
 
 <% @bookings.each do |b| %>
   <%= b.venue.name %>
+  <%= b.user.email %>
   <%= b.initial_date %>
   <%= b.final_date %>
 <% end %>
