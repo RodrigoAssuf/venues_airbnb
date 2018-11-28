@@ -1,10 +1,12 @@
 .footer {
     // margin: 0;
+    margin-top: 200px;
     border-width: 25px;
     background: #29003C;
-    height: 100%;
+    height: 100px;
     width: 100%;
     height: 230px;
+    padding: 20px 0px;
     // bottom: 0;
 }
 
@@ -17,24 +19,14 @@
   padding-top: 30px;
 }
 
-.text:hover {
-  color: #FA944B;
-  text-decoration: none;
-}
-
 .text2 {
   color: #fff;
   font-size: 15px;
   transition-duration: 0.2s;
   text-align: center;
   margin: -10px;
-  padding-top: 10px;
+  padding-top: 20px;
 
-}
-
-.text2:hover {
-  color: #FA944B;
-  text-decoration: none;
 }
 
 .text3 {
@@ -42,11 +34,6 @@
   font-size: 25px;
   transition-duration: 0.2s;
   text-align: center;
-}
-
-.text3:hover {
-  color: #FA944B;
-  text-decoration: none;
 }
 
 .footer-links {
