@@ -1,18 +1,15 @@
 class VenuesController < ApplicationController
   before_action :authenticate_user!
   def index
-    # if (params)
+    @venues = Venue.where.not(latitude: nil, longitude: nil)
 
-    #   if (params[:all])
-
-    #   else
-
-    #   end
-
-
-    # else
-
-    # end
+    @markers = @venues.map do |venue|
+      {
+        lng: venue.longitude,
+        lat: venue.latitude,
+        infoWindow: { content: render_to_string(partial: "/venues/map_box", locals: { venue: venue }) }
+      }
+    end
     @venues = Venue.all
   end
 
