@@ -1,6 +1,18 @@
 class VenuesController < ApplicationController
   before_action :authenticate_user!
   def index
+    # if (params)
+
+    #   if (params[:all])
+
+    #   else
+
+    #   end
+
+
+    # else
+
+    # end
     @venues = Venue.all
   end
 
