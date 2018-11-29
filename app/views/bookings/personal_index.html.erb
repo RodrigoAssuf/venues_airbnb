@@ -1,8 +1,23 @@
-<h2>Index of your Bookings</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <h2> Here are listed your bookings </h2>
+<br>
 
-<% @bookings.each do |b| %>
-  <%= b.venue.name %>
-  <%= b.user.email %>
-  <%= b.initial_date %>
-  <%= b.final_date %>
-<% end %>
+    <% @bookings.each do |b| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+          <img class="card-img-top img-responsive" src="https://source.unsplash.com/random/2500x1500" alt="wedding">
+          <div class="card-category"> <%= b.venue.category %> </div>
+          <div class="card-name"><%= b.venue.name %></div>
+          <div class="card-address">  <%= b.user.email %></div>
+          <div class="card-price"><%= b.final_date %></div>
+        </div>
+      </div>
+    <% end %>
+</div>
+</div>

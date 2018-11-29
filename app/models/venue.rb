@@ -1,6 +1,7 @@
 class Venue < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  mount_uploader :photo, PhotoUploader
   VENUE_TYPE = ['Wedding', 'Birthday', 'Corporate']
 
   validates :category, inclusion: { in: VENUE_TYPE }
