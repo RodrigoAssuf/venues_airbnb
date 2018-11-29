@@ -1,4 +1,4 @@
-source 'https://rubyggeocems.org'
+source 'https://rubygems.org'
 ruby '2.4.4'
 
 gem 'bootsnap', require: false
@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'geocoder'
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
