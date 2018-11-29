@@ -4,10 +4,12 @@
      <div class="search">
       <h1>Find your perfect venue</h1>
       <%= select_tag "venues", options_for_select(@venue_types, "All"), class: "searchTerm2" %>
-      <input type="text" class="searchTerm" placeholder="Where are you looking for?">
+          <%= render 'shared/searchbar' %>
+
+<!--       <input type="text" class="searchTerm" placeholder="Where are you looking for?">
       <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
-      </button>
+      </button> -->
     </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+<input type="search" id="address" class="form-control" placeholder="Where are we going?" />
+
+<p>Selected: <strong id="address-value">none</strong></p>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.14.0"></script>
+<script>
+(function() {
+  var placesAutocomplete = places({
+    appId: 'plVJT4GCPIFN',
+    apiKey: '1391e64b473d67d3ca60852962de3b18',
+    container: document.querySelector('#address')
+  });
+
+  var $address = document.querySelector('#address-value')
+  placesAutocomplete.on('change', function(e) {
+    $address.textContent = e.suggestion.value
+  });
+
+  placesAutocomplete.on('clear', function() {
+    $address.textContent = 'none';
+  });
+
+})();
+</script>
