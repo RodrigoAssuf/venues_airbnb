@@ -1,5 +1,5 @@
 <!-- Contents inside map popup -->
 
-<h3><%= venue.name %></h3>
+<h3><%= link_to venue.name, venue_path(venue) %></h3>
 <p>Address: <%= venue.address %></p>
 <p>Price: R$ <%= venue.price %></p>
