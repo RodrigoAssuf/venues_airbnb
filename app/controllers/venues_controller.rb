@@ -10,6 +10,11 @@ class VenuesController < ApplicationController
         infoWindow: { content: render_to_string(partial: "/venues/map_box", locals: { venue: venue }) }
       }
     end
+    @venues = Venue.all
+  end
+
+  def personal_index
+    @venues = Venue.where(user: current_user)
   end
 
   def show

@@ -1,9 +1,13 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_venue
+  before_action :set_venue, except: [:personal_index]
 
   def index
     @bookings = @venue.bookings.where(user: current_user)
+  end
+
+  def personal_index
+    @bookings = Booking.where(user: current_user)
   end
 
   def show
