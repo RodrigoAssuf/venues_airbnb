@@ -1,13 +1,5 @@
-#map {
-  flex: 0 0 450px;
-  position: sticky !important; /* !important to override Gmaps inline CSS */
-  height: 100vh;
-  top: 0 !important;
-  left: 0px;
-}
-
 .mapboxgl-popup {
-  max-width: 250px;
+  max-width: 280px;
 }
 
 .mapboxgl-popup-content {
@@ -19,7 +11,6 @@
   font-size: 26px;
 }
 
-.main-container {
-  display: flex;
+.main-container h2 {
+  margin-left: 20px;
 }
-
