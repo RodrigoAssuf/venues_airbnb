@@ -8,6 +8,6 @@ class Venue < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   def self.categories
-    VENUE_TYPES
+    VENUE_TYPE
   end
 end

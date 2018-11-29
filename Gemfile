@@ -1,4 +1,4 @@
-source 'https://rubyggeocems.org'
+source 'https://rubygems.org'
 ruby '2.4.4'
 
 gem 'bootsnap', require: false
@@ -18,7 +18,8 @@ gem 'webpacker'
 gem 'devise'
 gem 'geocoder'
 gem "algoliasearch-rails"
-
+gem 'faker'
+gem 'figaro'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

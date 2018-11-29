@@ -5,7 +5,7 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const mapElement = document.getElementById('map');
 
-if (mapElement) { 
+if (mapElement) {
 	// mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
 	mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
 	const map = new mapboxgl.Map({
@@ -38,4 +38,13 @@ if (markers.length === 0) {
 	map.addControl(new MapboxGeocoder({
     	accessToken: mapboxgl.accessToken
   }));
+}
+
+const addressInput = document.getElementById('address');
+
+if (addressInput) {
+  const places = require('places.js');
+  const placesAutocomplete = places({
+    container: addressInput
+  });
 }
