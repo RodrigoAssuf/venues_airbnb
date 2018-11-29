@@ -7,6 +7,11 @@
 		<div class="col-sm-4 col-sm-offset-4">
 			<h1>Add a Venue</h1>
 
+      <%= simple_form_for(article) do |f| %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+      <% end %>
+
 			<%= form_for([@user, @venue]) do |f| %>
 
 			<div class="form-group">

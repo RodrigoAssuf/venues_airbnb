@@ -2,6 +2,8 @@
 
 <h1 class="bannertext2">Here is the venue you added:</h1>
 
+<%= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
+
 <p class="bannertext3">Category: <%= @venue.category %></p>
 <p class="bannertext3">Name: <%= @venue.name %></p>
 <p class="bannertext3">Address: <%= @venue.address %></p>
