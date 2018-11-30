@@ -20,7 +20,6 @@
     <% if user_signed_in? %>
 
     <!-- Links when logged in -->
-    <%= link_to "Search a Venue", venues_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Your Venues", personal_index_venues_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Your Bookings", user_bookings_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Create a Venue", new_venue_path, class: "navbar-wagon-item navbar-wagon-link" %>
