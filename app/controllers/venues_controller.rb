@@ -27,7 +27,6 @@ class VenuesController < ApplicationController
 
     @venue = Venue.new(venue_params)
     @venue.user = current_user
-    debugger
     if @venue.save
       redirect_to venue_path(@venue)
     else
