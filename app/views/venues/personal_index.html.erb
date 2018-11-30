@@ -21,7 +21,7 @@
           <div class="card-name"><%= link_to v.name, venue_path(v) %></div>
           <div class="card-address"><%= v.address %></div>
           <div class="card-price"><%= v.price %></div>
-          <a class="quick-button"> edit </a>
+          <div class="quick-button"> <%= link_to 'edit', edit_venue_path(v) %> </div>
           </div>
       </div>
     <% end %>
