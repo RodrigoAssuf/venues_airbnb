@@ -3,11 +3,13 @@
     <div class="banner-wrap">
      <div class="search">
       <h1>Find your perfect venue</h1>
+<!--       <%=  form_tag(venues_path, method: "get", class: "searchTerm") do %>
       <%= select_tag "venues", options_for_select(@venue_types, "All"), class: "searchTerm2" %>
-      <input type="text" class="searchTerm" placeholder="Where are you looking for?">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-      </button>
+      <%= text_field_tag(:address) %>
+      <%= submit_tag("Search") %>
+      <% end %> -- -->
+
+      <%= render 'shared/searchbar' %>
     </div>
   </div>
 </div>
