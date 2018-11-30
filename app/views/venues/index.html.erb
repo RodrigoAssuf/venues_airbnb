@@ -34,16 +34,10 @@ data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   <div class="row">
     <div class="col-xs-6">
       <div class="card-index">
-        <% @venues.each do |v| %>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="card">
-            <img class="card-img-top img-responsive" src="https://source.unsplash.com/random/2500x1500" alt="wedding">
-            <div class="card-category"> <%= v.category %> </div>
-            <div class="card-name"><%= link_to v.name, venue_path(v) %></div>
-            <div class="card-address"><%= v.address %></div>
-            <div class="card-price">R$ <%= v.price %></div>
+        <% @venues.each do |venue| %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <%= render 'venues/card', venue: venue %>
           </div>
-        </div>
         <% end %>
       </div>
     </div>

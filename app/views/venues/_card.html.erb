@@ -1,0 +1,7 @@
+<div class="card">
+  <%= cl_image_tag venue.photo_or_default, height: 300, width: 400, crop: :fill, class: "card-img-top img-responsive" %>
+  <div class="card-category"> <%= venue.category %> </div>
+  <div class="card-name"><%= link_to venue.name, venue_path(venue) %></div>
+  <div class="card-address"><%= venue.address %></div>
+  <div class="card-price">R$ <%= venue.price %></div>
+</div>
