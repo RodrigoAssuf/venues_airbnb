@@ -17,9 +17,9 @@ puts 'Finished!'
 
 puts 'Creating venues...'
 users = User.all
-Venue.create!( name: 'Happy Place', category: 'Wedding', user: users.sample, price: '1300', address: 'Ladeira da Gloria 26, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=200' )
-Venue.create!( name: 'Perfect Wedding', category: 'Wedding', user: users.sample, price: '800', address: 'rua Visconde de Piraja 435, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=553' )
-Venue.create!( name: 'Beach Wedding', category: 'Wedding', user: users.sample, price: '500', address: 'Avenida Rio Branco 76, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=354' )
+Venue.create!( name: 'Kay Place', category: 'Wedding', user: users.sample, price: '1300', address: 'Ladeira da Gloria 26, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=200' )
+Venue.create!( name: 'Perfect day', category: 'Wedding', user: users.sample, price: '800', address: 'rua Visconde de Piraja 435, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=553' )
+Venue.create!( name: 'Cool Place', category: 'Wedding', user: users.sample, price: '500', address: 'Avenida Rio Branco 76, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=354' )
 Venue.create!( name: 'Playland', category: 'Birthday', user: users.sample, price: '2000', address: 'Av Presidente Vargas 88, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=888' )
 Venue.create!( name: 'Feliz Cumple', category: 'Birthday', user: users.sample, price: '5300', address: 'rua honorio de barros 55, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=666' )
 Venue.create!( name: 'Kidz Bday', category: 'Birthday', user: users.sample, price: '700', address: 'Sambaiba 12, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=90' )
