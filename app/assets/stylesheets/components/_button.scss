@@ -1,8 +1,7 @@
 .button {
     color: #999999;
-    font-family: Lato;
     border: 1px solid #999999;
-    padding: 10px 15px;
+    padding: 5px 15px;
     border-radius: 50px;
     font-weight: lighter;
     background: white;
@@ -14,4 +13,28 @@
   opacity: 1;
   text-decoration: none;
   color: #999999;
+  padding: 5px 5px;
+
 }
+
+// .quick-button {
+//     color: #999999;
+//     border: 1px solid #999999;
+//     padding: 15px 15px;
+//     border-radius: 50px;
+//     font-weight: lighter;
+//     background: white;
+//     opacity: 1;
+//     margin-top: 10px;
+//     height:65%;
+//     width: 65%;
+//     text-align: center;
+//     display:inline;
+//     font-size: 25px;
+// }
+
+// .quick-button:hover {
+//   opacity: 1;
+//   text-decoration: none;
+//   color: #999999;
+// }

@@ -1,4 +1,12 @@
-<h2>Test: All the Bookings of a Venue</h2>
+<div id="smallbanner">
+<br>
+<br>
+<br>
+<br>
+  <h1 class="fontsmallbanner"> Find here all your venue's bookings </h1>
+  <p class="fontsmallbanner"></p>
+<br>
+<br>
 
 <% @bookings.each do |b| %>
   <p><%= b.initial_date %></p>
@@ -6,3 +14,6 @@
   <p><%= b.user.email %></p>
   <p><%= b.price %></p>
   <% end %>
+
+<div class="quick-button">Edit</div>
+<div class="quick-button">Delete</div>

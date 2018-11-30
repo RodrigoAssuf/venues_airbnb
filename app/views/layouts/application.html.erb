@@ -6,14 +6,19 @@
     <title>TODO</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+    <%= stylesheet_pack_tag "map" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-  </head>
+<!--     <style> body {background: linear-gradient(to left, #654ea3, #eaafc8);}</style>
+ -->  </head>
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'map' %>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.14.0"></script>
+    <%= javascript_pack_tag 'searchbar' %>
   </body>
 </html>

@@ -1,19 +1,14 @@
 class VenuesController < ApplicationController
   before_action :authenticate_user!
   def index
-    # if (params)
-
-    #   if (params[:all])
-
-    #   else
-
-    #   end
-
-
-    # else
-
-    # end
-    @venues = Venue.all
+    @venues = Venue.near(params[:address])
+    @markers = @venues.map do |venue|
+      {
+        lng: venue.longitude,
+        lat: venue.latitude,
+        infoWindow: { content: render_to_string(partial: "/venues/map_box", locals: { venue: venue }) }
+      }
+    end
   end
 
   def personal_index
@@ -29,8 +24,10 @@ class VenuesController < ApplicationController
   end
 
   def create
+
     @venue = Venue.new(venue_params)
     @venue.user = current_user
+    debugger
     if @venue.save
       redirect_to venue_path(@venue)
     else
@@ -57,7 +54,7 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:name, :address, :category, :price)
+    params.require(:venue).permit(:name, :address, :category, :price, :photo)
   end
 
   def set_user

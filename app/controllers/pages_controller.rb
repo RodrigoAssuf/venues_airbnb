@@ -4,5 +4,6 @@ class PagesController < ApplicationController
     @venue_types = []
     @venue_types << "All"
     @venue_types += Venue::VENUE_TYPE
+    @venues = Venue.all
   end
 end

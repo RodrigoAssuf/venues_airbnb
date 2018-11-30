@@ -1,0 +1,70 @@
+SAVED CODE
+
+
+VIEWS VENUE INDEX
+
+
+<br>
+<br>
+<br>
+<br>
+<<<<<<< evenmore
+  <h1>Where would you like to party?</h1>
+  <h2>On this page, you can browse all our available venues</h2>
+  <!--        <a class="createbutton" <%= link_to 'Create a new venue', new_venue_path %></a> -->
+</div>
+
+    <% @venues.each do |v| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+          <img class="card-img-top img-responsive" src="https://source.unsplash.com/random/2500x1500" alt="wedding">
+          <div class="card-category"> <%= v.category %> </div>
+          <div class="card-name"><%= link_to v.name, venue_path(v) %></div>
+          <div class="card-address"><%= v.address %></div>
+          <div class="card-price"><%= v.price %></div>
+        </div>
+          <div class="quick-button">Edit</div>
+          <div class="quick-button">Delete</div>
+      </div>
+    <% end %>
+
+<div
+id="map"
+style="width: 100%;
+height: 600px;"
+data-markers="<%= @markers.to_json %>"
+data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+=======
+<br>
+<div class="main-container">
+  <h2> Here are your search results:</h2>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="card-index">
+        <% @venues.each do |v| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card">
+            <img class="card-img-top img-responsive" src="https://source.unsplash.com/random/2500x1500" alt="wedding">
+            <div class="card-category"> <%= v.category %> </div>
+            <div class="card-name"><%= link_to v.name, venue_path(v) %></div>
+            <div class="card-address"><%= v.address %></div>
+            <div class="card-price">R$ <%= v.price %></div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-6">
+
+      <div
+      id="map"
+      style="width: 100%;
+      height: 100vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
+  </div>
+</div>
+>>>>>>> master

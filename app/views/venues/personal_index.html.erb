@@ -1,8 +1,29 @@
-<h2>Personal Index of Venues</h2>
+<div id="smallbanner">
+<br>
+<br>
+<br>
+<br>
+  <h1 class="fontsmallbanner"> Here are all your venues </h1>
+  <p class="fontsmallbanner"></p>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+<!--     <h2> Here are listed the venues you created </h2>
+ --><br>
 
-<% @venues.each do |v| %>
-  <%= v.category %>
-  <%= link_to v.name, venue_path(v) %>
-  <%= v.address %>
-  <%= v.price %>
-  <% end %>
+    <% @venues.each do |v| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+          <img class="card-img-top img-responsive" src="https://source.unsplash.com/random/2500x1500" alt="wedding">
+          <div class="card-category"> <%= v.category %> </div>
+          <div class="card-name"><%= link_to v.name, venue_path(v) %></div>
+          <div class="card-address"><%= v.address %></div>
+          <div class="card-price"><%= v.price %></div>
+          <div class="quick-button">Edit</div>
+          </div>
+      </div>
+    <% end %>
+</div>
+</div>
