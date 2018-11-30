@@ -3,12 +3,18 @@
 <br>
 <br>
 <br>
+<br>
   <h1 class="fontsmallbanner"> Here's the booking of this venue  </h1>
   <p class="fontsmallbanner"></p>
 <br>
 <br>
-
-<p><%= @booking.initial_date %></p>
-<p><%= @booking.final_date %></p>
-<p><%= @booking.user.email %></p>
-<p><%= @booking.price %></p>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+ <h3> Start date: <%= @booking.initial_date %> </h3>
+  <h3> End date: <%= @booking.final_date %> <h3>
+  <h3> Email: <%= @booking.user.email %> <h3>
+  <h3> Total price: R$ <%= @booking.price %> <h3>
+</div>
+</div>

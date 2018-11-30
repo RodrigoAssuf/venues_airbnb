@@ -1,0 +1,8 @@
+<%= simple_form_for [venue, booking] do |f| %>
+  <div class="form-inline">
+    <%= f.input :initial_date, as: :date, html5: true %>
+    <%= f.input :final_date, as: :date, html5: true %>
+  </div>
+  <br>
+  <%= f.button :button, "Create", class: "btn-primary search-box__button" %>
+<% end %>
