@@ -1,4 +1,5 @@
 <div class="card">
+  <div class="card-photo"> <%= cl_image_tag venue.photo_or_default %> </div>
   <div class="card-category"> <%= venue.category %> </div>
   <div class="card-name"><%= link_to venue.name, venue_path(venue) %></div>
   <div class="card-address"><%= venue.address %></div>
