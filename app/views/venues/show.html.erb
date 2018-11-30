@@ -8,12 +8,7 @@
 <br>
 <br>
 
-<%= cl_image_tag @venue.photo, height: 300, width: 400, crop: :fill %>
-
-<p class="bannertext3">Category: <%= @venue.category %></p>
-<p class="bannertext3">Name: <%= @venue.name %></p>
-<p class="bannertext3">Address: <%= @venue.address %></p>
-<p class="bannertext3">Price: <%= @venue.price %></p>
+<%= render 'venues/card', venue: @venue %>
 
 <% if @venue.user == current_user %>
   <a class="actionbutton" <%= link_to 'Edit this Venue', edit_venue_path(@venue) %> </a>
