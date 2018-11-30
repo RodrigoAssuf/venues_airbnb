@@ -11,22 +11,11 @@
 <br>
 <div class="container">
   <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
-
-      <%= form_for([@venue, @booking]) do |f| %>
-
-      <div class="form-group">
-        <%= f.label :initial_date %>
-        <%= f.text_field :initial_date, class: 'form-control' %>
+      <div class="search-box">
+        <%= render 'bookings/form', venue: @venue, booking: @booking %>
       </div>
 
-      <div class="form-group">
-        <%= f.label :final_date %>
-        <%= f.text_field :final_date, class: 'form-control' %>
-      </div>
 
-      <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
     </div>
   </div>
 </div>
