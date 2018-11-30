@@ -39,6 +39,7 @@ body{
 .searchButton {
   position: absolute;
   right: -50px;
+  top: 68px;
   width: 40px;
   height: 36px;
   border: 1px solid #00B4CC;
@@ -59,7 +60,7 @@ body{
   transform: translate(-50%, -50%);
 }
 
-.app-sugestion {
-  text-align: left;
-  color: #7b7373;
+.ap-suggestion {
+  text-align: left !important;
+  color: #7b7373 !important;
 }
