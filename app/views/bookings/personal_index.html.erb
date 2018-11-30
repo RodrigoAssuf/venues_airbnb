@@ -7,7 +7,10 @@
   <p class="fontsmallbanner"></p>
 <br>
 <br>
-
+<br>
+<br>
+<div class="container">
+  <div class="row">
     <% @bookings.each do |b| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card">
@@ -16,10 +19,14 @@
           <div class="card-name"><%= b.venue.name %></div>
           <div class="card-address">  <%= b.user.email %></div>
           <div class="card-price"><%= b.final_date %></div>
+          <button class="quick-button">Edit</button>
         </div>
-          <div class="quick-button">Edit</div>
-          <div class="quick-button">Delete</div>
+
       </div>
     <% end %>
+
+</div>
+</div>
+
 </div>
 </div>

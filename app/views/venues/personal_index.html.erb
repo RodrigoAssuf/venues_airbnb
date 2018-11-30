@@ -7,6 +7,7 @@
   <p class="fontsmallbanner"></p>
 <br>
 <br>
+<br>
 <div class="container">
   <div class="row">
 <!--     <h2> Here are listed the venues you created </h2>
@@ -20,14 +21,8 @@
           <div class="card-name"><%= link_to v.name, venue_path(v) %></div>
           <div class="card-address"><%= v.address %></div>
           <div class="card-price"><%= v.price %></div>
-
-        </div>
           <div class="quick-button">Edit</div>
-          <div class="quick-button">Delete</div>
-
-
-
-
+          </div>
       </div>
     <% end %>
 </div>
