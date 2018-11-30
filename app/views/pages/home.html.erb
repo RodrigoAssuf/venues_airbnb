@@ -8,6 +8,21 @@
   </div>
 </div>
 </div>
+
+
+<div class="custom-container container">
+  <div class="custom-row row">
+<br>
+    <h2> Browse all our venues here! </h2>
+<br>
+    <% @venues.each do |venue| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= render 'venues/card', venue: venue %>
+      </div>
+    <% end %>
+</div>
+</div>
+
 <footer class="footer">
   <h1 class="text">THE AIRBNB OF VENUES</h1>
   <h2 class="text2">&copy;MADE IN RIO</h2>
