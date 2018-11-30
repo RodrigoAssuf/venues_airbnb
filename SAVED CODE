@@ -1,7 +1,14 @@
+SAVED CODE
+
+
+VIEWS VENUE INDEX
+
+
 <br>
 <br>
 <br>
 <br>
+<<<<<<< evenmore
   <h1>Where would you like to party?</h1>
   <h2>On this page, you can browse all our available venues</h2>
   <!--        <a class="createbutton" <%= link_to 'Create a new venue', new_venue_path %></a> -->
@@ -60,3 +67,4 @@ data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     </div>
   </div>
 </div>
+>>>>>>> master
