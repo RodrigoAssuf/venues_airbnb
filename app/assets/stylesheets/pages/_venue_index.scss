@@ -47,10 +47,13 @@
   cursor: pointer;
   transition: 800ms ease all;
   outline:none;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   background: linear-gradient(135deg, #6e8efb, #a777e3);
   box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-  top: 45px;
+  top: 30px;
   // bottom: 600px;
   text-decoration: none;
 }
@@ -58,5 +61,8 @@
 .createbutton:hover {
   text-decoration: none;
   color: white;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }

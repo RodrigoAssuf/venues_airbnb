@@ -2,7 +2,7 @@ class Venue < ApplicationRecord
   belongs_to :user
   has_many :bookings
   mount_uploader :photo, PhotoUploader
-  VENUE_TYPE = ['Wedding', 'Birthday', 'Corporate']
+  VENUE_TYPE = ['Wedding', 'Birthday', 'Business']
 
   validates :category, inclusion: { in: VENUE_TYPE }
   geocoded_by :address
