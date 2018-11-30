@@ -1,7 +1,7 @@
 class VenuesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @venues = Venue.where.not(latitude: nil, longitude: nil)
+    @venues = Venue.near(params[:query], 100)
     @markers = @venues.map do |venue|
       {
         lng: venue.longitude,

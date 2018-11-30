@@ -17,13 +17,13 @@ puts 'Finished!'
 
 puts 'Creating venues...'
 users = User.all
-Venue.create!( name: 'Wedding 1', category: 'Wedding', user: users.sample, price: '1300', address: 'Ladeira da Gloria 26, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=200' )
-Venue.create!( name: 'Wedding 2', category: 'Wedding', user: users.sample, price: '800', address: 'rua Visconde de Piraja 435, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=553' )
-Venue.create!( name: 'Wedding 3', category: 'Wedding', user: users.sample, price: '500', address: 'Avenida Rio Branco 76, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=354' )
-Venue.create!( name: 'Birthday 1', category: 'Birthday', user: users.sample, price: '2000', address: 'Avenida Presidente Vargas 88, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=888' )
-Venue.create!( name: 'Birthday 2', category: 'Birthday', user: users.sample, price: '5300', address: 'rua honorio de barros 55, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=666' )
-Venue.create!( name: 'Birthday 3', category: 'Birthday', user: users.sample, price: '700', address: 'Sambaiba 12, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=90' )
-Venue.create!( name: 'Business 1', category: 'Business', user: users.sample, price: '1500', address: 'Ladeira da Gloria 86, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=150' )
-Venue.create!( name: 'Business 2', category: 'Business', user: users.sample, price: '600', address: 'rua honorio de barros 12, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=500' )
-Venue.create!( name: 'Business 3', category: 'Business', user: users.sample, price: '300', address: 'Sambaiba 45, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=450' )
+Venue.create!( name: 'Wedding 1', category: 'Wedding', user: users.sample, price: '1300', address: 'Ladeira da Gloria 26, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=200' )
+Venue.create!( name: 'Wedding 2', category: 'Wedding', user: users.sample, price: '800', address: 'rua Visconde de Piraja 435, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=553' )
+Venue.create!( name: 'Wedding 3', category: 'Wedding', user: users.sample, price: '500', address: 'Avenida Rio Branco 76, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=354' )
+Venue.create!( name: 'Birthday 1', category: 'Birthday', user: users.sample, price: '2000', address: 'Av Presidente Vargas 88, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=888' )
+Venue.create!( name: 'Birthday 2', category: 'Birthday', user: users.sample, price: '5300', address: 'rua honorio de barros 55, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=666' )
+Venue.create!( name: 'Birthday 3', category: 'Birthday', user: users.sample, price: '700', address: 'Sambaiba 12, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=90' )
+Venue.create!( name: 'Business 1', category: 'Business', user: users.sample, price: '1500', address: 'Ladeira da Gloria 86, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=222' )
+Venue.create!( name: 'Business 2', category: 'Business', user: users.sample, price: '600', address: 'rua honorio de barros 12, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=500' )
+Venue.create!( name: 'Business 3', category: 'Business', user: users.sample, price: '300', address: 'Sambaiba 45, Rio de Janeiro, RJ', remote_photo_url: 'https://picsum.photos/400/300/?image=450' )
 puts 'Finished!'
