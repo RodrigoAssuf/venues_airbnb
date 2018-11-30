@@ -3,13 +3,16 @@
 <br>
 <br>
 <br>
+<br>
+
   <h1 class="fontsmallbanner"> Here are this venue's information </h1>
   <p class="fontsmallbanner"></p>
 <br>
 <br>
+
 <br>
 
-<%= cl_image_tag @venue.photo, height: 300, width: 400, crop: :fill %>
+
 
 <a class="button" <%= link_to 'Back to Home', root_path %> </a>
 <br>
@@ -17,26 +20,18 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card">
-          <img class="card-img-top img-responsive" src="https://source.unsplash.com/random/2500x1500" alt="wedding">
-          <div class="card-category"> <%= @venue.category %> </div>
-          <div class="card-name"><%= @venue.name %> </div>
-          <div class="card-address"> <%= @venue.address %> </div>
-          <div class="card-price">R$ <%= @venue.price %></div>
-          </div>
-
-      </div>
-      <% if @venue.user == current_user %>
-  <a class="button" <%= link_to 'Edit this Venue', edit_venue_path(@venue) %> </a>
-  <a class="button" <%= link_to 'View bookings', venue_bookings_path(@venue, @booking) %> </a>
-  <a class="button" <%= link_to 'Delete this Venue', venue_path(@venue), method: :delete, data: { confirm: "Are you sure you want to delete this Venue?" } %>
-<% else %>
-  <a class="button"<%= link_to 'Book this Venue', new_venue_booking_path(@venue, @booking) %>
-<% end %> </a>
-          </div>
-      </div>
-
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <%= render 'venues/card', venue: @venue %>
+    </div>
+     <% if @venue.user == current_user %>
+        <%= link_to 'Edit this Venue', edit_venue_path(@venue), class: "button" %>
+        <%= link_to 'View bookings', venue_bookings_path(@venue, @booking), class: "button" %>
+        <%= link_to 'Delete this Venue', venue_path(@venue), method: :delete, data: { confirm: "Are you sure you want to delete this Venue?" }, class: "button" %>
+      <% else %>
+        <%= link_to 'Book this Venue', new_venue_booking_path(@venue, @booking), class: "button" %>
+      <% end %>
+  </div>
+</div>
 
 
 

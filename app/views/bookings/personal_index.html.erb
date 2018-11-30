@@ -20,12 +20,10 @@
           <div class="card-address">  <%= b.user.email %></div>
           <div class="card-price"> for a price of R$<%= b.price %> </div>
           <div class="card-price"> from <%= b.initial_date %> to <%= b.final_date %> </div>
-          <button class="quick-button">Edit</button>
+          <div class="quick-button"> <%= link_to 'edit', edit_venue_booking_path(b.venue, b) %> </div>
         </div>
-
       </div>
     <% end %>
-
 </div>
 </div>
 

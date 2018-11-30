@@ -3,32 +3,16 @@
     <div class="banner-wrap">
      <div class="search">
       <h1>So, where's the party?</h1>
-<!--       <%=  form_tag(venues_path, method: "get", class: "searchTerm") do %>
+
+      <%=  form_tag(venues_path, method: "get", class: "searchTerm") do %>
       <%= select_tag "venues", options_for_select(@venue_types, "All"), class: "searchTerm2" %>
       <%= text_field_tag(:address) %>
       <%= submit_tag("Search") %>
-      <% end %> -- -->
-
-      <%= render 'shared/searchbar' %>
+      <% end %>
     </div>
   </div>
 </div>
 </div>
-
-
-<div class="custom-container container">
-  <div class="custom-row row">
-<br>
-    <h2> Browse all our venues here! </h2>
-<br>
-    <% @venues.each do |venue| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <%= render 'venues/card', venue: venue %>
-      </div>
-    <% end %>
-</div>
-</div>
-
 <footer class="footer">
   <h1 class="text">THE AIRBNB OF VENUES</h1>
   <h2 class="text2">&copy;MADE IN RIO</h2>
