@@ -5,21 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
+User.destroy_all
+Venue.destroy_all
 
-user1 = User.create(email:'john@gmail.com', password: 'abcd1234')
-user2 = User.create(email:'mark@gmail.com', password: 'abcd1234')
-user3 = User.create(email:'andrew@gmail.com', password: 'abcd1234')
-user4 = User.create(email:'luke@gmail.com', password: 'abcd1234')
-user5 = User.create(email:'matthew@gmail.com', password: 'abcd1234')
-
-
+puts 'Creating users...'
+User.create!(email:'ricardo@gmail.com', password: '1234abcd')
+User.create!(email:'manuel@gmail.com', password: '1234abcd')
+User.create!(email:'milene@gmail.com', password: '1234abcd')
+User.create!(email:'rodrigo@gmail.com', password: '1234abcd')
+puts 'Finished!'
 
 puts 'Creating venues...'
 users = User.all
-Venue.categories.each do |category|
-  20.times do
-    Venue.create!(name: Faker::Company.name, category: category, user: users.sample, address: 'Omaha, NE, US')
-  end
-end
+Venue.create!( name: 'Wedding 1', category: 'Wedding', user: users.sample, price: '1300', address: 'Ladeira da Gloria 26, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=200' )
+Venue.create!( name: 'Wedding 2', category: 'Wedding', user: users.sample, price: '800', address: 'rua Visconde de Piraja 435, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=553' )
+Venue.create!( name: 'Wedding 3', category: 'Wedding', user: users.sample, price: '500', address: 'Avenida Rio Branco 76, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=354' )
+Venue.create!( name: 'Birthday 1', category: 'Birthday', user: users.sample, price: '2000', address: 'Avenida Presidente Vargas 88, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=888' )
+Venue.create!( name: 'Birthday 2', category: 'Birthday', user: users.sample, price: '5300', address: 'rua honorio de barros 55, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=666' )
+Venue.create!( name: 'Birthday 3', category: 'Birthday', user: users.sample, price: '700', address: 'Sambaiba 12, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=90' )
+Venue.create!( name: 'Business 1', category: 'Business', user: users.sample, price: '1500', address: 'Ladeira da Gloria 86, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=150' )
+Venue.create!( name: 'Business 2', category: 'Business', user: users.sample, price: '600', address: 'rua honorio de barros 12, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=500' )
+Venue.create!( name: 'Business 3', category: 'Business', user: users.sample, price: '300', address: 'Sambaiba 45, Rio de Janeiro, RJ', photo: 'https://picsum.photos/400/300/?image=450' )
 puts 'Finished!'

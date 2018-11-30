@@ -1,9 +1,9 @@
 class Venue < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   mount_uploader :photo, PhotoUploader
   VENUE_TYPE = ['Wedding', 'Birthday', 'Business']
-  DEFAULT_PHOTO = "https://source.unsplash.com/random/2500x1500"
+  DEFAULT_PHOTO = "https://source.unsplash.com/random/500x150"
 
   validates :category, inclusion: { in: VENUE_TYPE }
   validates :name, presence: true
