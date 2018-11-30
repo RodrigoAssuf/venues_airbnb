@@ -18,7 +18,8 @@
           <div class="card-category"> <%= b.venue.category %> </div>
           <div class="card-name"><%= b.venue.name %></div>
           <div class="card-address">  <%= b.user.email %></div>
-          <div class="card-price"><%= b.final_date %></div>
+          <div class="card-price"> for a price of R$<%= b.price %> </div>
+          <div class="card-price"> from <%= b.initial_date %> to <%= b.final_date %> </div>
           <button class="quick-button">Edit</button>
         </div>
 
@@ -30,3 +31,5 @@
 
 </div>
 </div>
+
+
